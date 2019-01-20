@@ -1,0 +1,15 @@
+.gradle/
+.vs/
+Library/
+Logs/
+obj/
+Packages/
+ProjectSettings/
+QCAR/
+Temp/
+*.apk
+*.csproj
+*.sln
+Assets/Vuforia/
+*.meta
+Assets/Resources/VuforiaConfiguration.asset
