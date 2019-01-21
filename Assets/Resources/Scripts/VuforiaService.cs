@@ -22,6 +22,8 @@ namespace Assets.Resources.Scripts
             }
         }
 
+        public int MaxSimultaneousImageTargets => VuforiaConfiguration.Instance.Vuforia.MaxSimultaneousImageTargets;
+
         public List<ExtendedTrackableBehaviour> Targets { get; private set; }
 
         public VuforiaService()

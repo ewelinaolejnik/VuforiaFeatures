@@ -13,24 +13,25 @@ namespace Assets.Resources.Scripts
         protected override void OnTrackingFound()
         {
             base.OnTrackingFound();
-
-            var textComponents = GetComponentsInChildren<Text>(true);
-            SetComponentsBehaviour(textComponents, true);
+            SetComponentsBehaviour(true);
         }
 
         protected override void OnTrackingLost()
         {
             base.OnTrackingLost();
-
-            var textComponents = GetComponentsInChildren<Text>(true);
-            SetComponentsBehaviour(textComponents, false);
+            SetComponentsBehaviour(false);
         }
 
-        private void SetComponentsBehaviour(Behaviour[] components, bool value)
+        private void SetComponentsBehaviour(bool value)
         {
-            foreach (var component in components)
+            var textComponents = GetComponentsInChildren<Text>(true);
+            var imageComponents = GetComponentsInChildren<RawImage>(true);
+
+            foreach (var component in textComponents)
                 component.enabled = value;
 
+            foreach (var component in imageComponents)
+                component.enabled = value;
         }
     }
 }

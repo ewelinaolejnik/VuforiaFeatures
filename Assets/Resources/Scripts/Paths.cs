@@ -26,5 +26,21 @@ namespace Assets.Resources.Scripts
                 return Directory.GetFiles(path, "*.xml", SearchOption.TopDirectoryOnly).FirstOrDefault(f => f.Contains("ImageTargets"));
             }
         }
+
+        public static string VirtualImagesPath
+        {
+            get
+            {
+                return Path.Combine(Application.persistentDataPath, "Images");
+            }
+        }
+
+        public static string TargetDataPath
+        {
+            get
+            {
+                return Path.Combine(Application.persistentDataPath, "TargetData");
+            }
+        }
     }
 }
